@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+</head>
+<body>
+    <header>
+        <h1>Project Title</h1>
+    </header>
+    <main>
+        <section class="project-description">
+            <h2>About This Project</h2>
+            <p>
+                Cognitive impairment is a public health issue caused by an aging population, significantly im
+        pacting quality of life and healthcare systems. Recent studies highlight the relationship between
+        sleep patterns and the development of cognitive disorders, such as Mild Cognitive Impairment
+        (MCI) or dementia. In this context, artificial intelligence emerges as a promising tool capable of
+        analyzing large volumes of complex data, such as brain signals (electroencephalograms, EEGs),
+        to identify patterns and make predictions that facilitate early diagnosis.
+        The objective of this project is to decode the cognitive state of older adults based on EEG signals
+        recorded during sleep, in order to classify individuals into one of the main groups characterizing
+        cognitive impairment: healthy individuals, those with Subjective Cognitive Decline (SCI), those
+        with Mild Cognitive Impairment (MCI), or those with dementia (DEM). This classification task
+        has been carried out by training multiple models and architectures in both Machine Learning
+        (ML) and Deep Learning (DL), aiming to achieve the best possible performance on a dataset
+        acquired by the Neuroscience team at Bitbrain. The EEG signals analyzed were obtained using
+        the Ikon Sleep device, developed by the same company, which can be autonomously placed by
+        the subjects at home or with the supervision of a family member or caregiver.
+        This classification problem has been approached in three different ways. First, the sessions were
+        treated as the evolution of sleep stages over time (hypnograms), obtained from EEG signals using
+        an external DL model that classifies each 30-second EEG window into a specific sleep stage (Wake,
+        N1, N2, N3, or REM). The classification of these sequences was performed using Recurrent Neural
+        Networks (RNNs). Second, the temporal dimension of these hypnograms was removed, extracting
+        characteristics (henceforth referred to as features) derived directly from sleep macrostructure.
+        The classification of sessions characterized by these feature lists was carried out using various
+        ML and DL models, both linear and nonlinear. Third, the sessions were characterized as feature
+        lists obtained from sleep microstructure (EEG signals). These features, grouped by different sleep
+        stages, provide a more detailed insight into a person’s sleep patterns. Additionally, they were
+        combined with macrostructure-derived features. Various feature selection processes were then
+        applied using statistical analyses and importance coefficients. This approach, which yielded the
+        best results, employed the same ML and DL models used for macrostructure-derived features.
+        All experiments were conducted under three labeling configurations: Configuration 1 differentia
+        tes healthy patients from all others; Configuration 2 groups healthy and SCI patients against
+        MCI and DEM patients; and Configuration 3 separates all four classes. Thus, Configurations 1
+        and 2 represent binary classification problems, while Configuration 3 is a multiclass problem.
+        As a result, the combination of micro- and macrostructure features achieved 87.68% accuracy
+        for Configuration 2, 73.53% for Configuration 1, and 47.47% for Configuration 3.
+        In conclusion, this study confirms that EEG activity during sleep provides valuable insights into
+        the cognitive state of older adults, which could be used in the future to improve diagnostic
+        systems for cognitive impairment. The results obtained in this project are promising, as they
+            </p>
+        </section>
+        <section class="documents">
+            <h2>Project Documents</h2>
+            <a href="documents/project-report.pdf" target="_blank">Project Report (PDF)</a>
+            <a href="documents/project-presentation.ppt" target="_blank">Project Presentation (PPT)</a>
+        </section>
+        <section class="results">
+            <h2>Project Results</h2>
+            <p>Results will be available soon. Stay tuned!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
