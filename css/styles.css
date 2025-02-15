@@ -151,3 +151,72 @@ footer {
 .project-item .buttons button i {
     margin-right: 5px;
 }
+
+.projects-list {
+    display: none;
+    margin-top: 10px;
+}
+.projects-list.active {
+    display: block;
+}
+.projects-toggle {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+.subject-dropdown {
+    display: none;
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.subject-dropdown.active {
+    display: block;
+}
+
+.subject-toggle {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.subject-toggle,
+.projects-toggle {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid #40e0d0;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.subject-toggle:hover,
+.projects-toggle:hover {
+    background-color: #e0f7fa;
+    border-color: #00ced1;
+}
+
+.subject-dropdown,
+.projects-list {
+    display: none;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 10px;
+    border: 2px solid #40e0d0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject-dropdown.active,
+.projects-list.active {
+    display: block;
+}
+
+

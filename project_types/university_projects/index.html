@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styles.css">
     <title>University Projects</title>
 </head>
 <body>
@@ -199,16 +200,20 @@
                             </ul>
                         </li>
                         <li>
-                            Concurrent & Distributed Systems Programming: we went into how to properly manage threads and processes in a system, as well as how to deal 
-                            with concurrency problems where a thread (that can represent an entity, such as a person, depending on the problem) has to wait for something to happen. We learnt about defferent strategies (semaphores,
-                            mutexes, sockets...) to solve these problems. We finally developed, in groups, a complex Twitter system where... 
-                            <ul>
+                            <span class="subject-toggle">Concurrent & Distributed Systems Programming</span>
+                            <ul class="subject-dropdown">
+                                <li>
+                                    We went into how to properly manage threads and processes in a system, as well as how to deal 
+                                    with concurrency problems where a thread (that can represent an entity, such as a person, depending on the problem) has to wait for something to happen. We learnt about defferent strategies (semaphores,
+                                    mutexes, sockets...) to solve these problems. We finally developed, in groups, a complex Twitter system where... 
+                                </li>
+                            
                                 <li>
                                     Technologies used: C++
                                 </li>
                                 <li>
-                                    Projects:
-                                    <ul>
+                                    <span class="projects-toggle">Projects:</span>
+                                    <ul class="projects-list">
                                         <li>
                                             <section class="dropdown">
                                                 <strong>Master-worker archtecture for hashtags analysis from Twitter</strong>: La Palma's vulcano catastrophe
@@ -873,5 +878,8 @@
     <footer>
         <p>&copy; 2023 [Your Name]. All rights reserved.</p>
     </footer>
+
+    <script src="../../js/script.js"></script>
+
 </body>
 </html>
