@@ -58,6 +58,25 @@ footer {
     color: #777;
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.button-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #40e0d0;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.button-container a:hover {
+    background-color: #00ced1;
+}
+
 /* Dropdown (view & download douments) */
 .project-description {
     text-align: left;
@@ -200,7 +219,29 @@ footer {
 .projects-toggle:hover {
     background-color: #e0f7fa;
     border-color: #00ced1;
+    opacity: 0.8;
 }
+
+.year-1 {
+    background-color: #b8ecba; /* Green for Year 1 */
+    border: 2px solid #86ed8b;
+}
+
+.year-2 {
+    background-color: #9eccf2; /* Blue for Year 2 */
+    border: 2px solid #6fb2ec;
+}
+
+.year-3 {
+    background-color: #ebcc9d; /* Orange for Year 3 */
+    border: 2px solid #e6a168;
+}
+
+.year-4 {
+    background-color: #fba49c; /* Orange for Year 3 */
+    border: 2px solid #f06f60;
+}
+
 
 .subject-dropdown,
 .projects-list {
@@ -219,4 +260,44 @@ footer {
     display: block;
 }
 
+
+
+/*
+Contact page:
+*/
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.contact-form h2 {
+    margin-top: 0;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #40e0d0;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #00ced1;
+}
 
