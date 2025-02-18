@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="static/styles.css">
+    <style>
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown-container:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,13 +47,22 @@
         </section>
         <div class="button-container">
             <a href="/project_types/projects.html">Projects</a>
-            <a href="/work-experience">Work Experience</a>
+            <a href="/work_experiences/work_experience.html">Work Experience</a>
             <a href="/skills">Skills</a>
-            <a href="/contact">Contact</a>
+            <a href="/templates/contact_form.html">Contact</a>
+            <a href="/templates/why_this_website.html">Why this website?</a>
+            <a href="https://github.com/brizuelayeah" target="_blank">GitHub</a>
+            <div class="dropdown-container">
+                <a href="javascript:void(0);">My CV</a>
+                <div class="dropdown-content">
+                    <a href="project_types/university_projects/projects_documents/CV_Oscar_january_2025_ENG_nf.pdf" target="_blank">View CV</a>
+                    <a href="project_types/university_projects/projects_documents/CV_Oscar_january_2025_ENG_nf.pdf" download>Download CV</a>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 [Óscar Brizuela]. All rights reserved.</p>
+        <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
 </body>
 </html>
