@@ -6,10 +6,66 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="static/styles.css">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        main {
+            flex: 1 0 auto;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            flex-shrink: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center; /* Align items vertically */
+        }
+
+        .button-container a,
+        .dropdown-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #40e0d0;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center; /* Center text vertically */
+        }
+
+        .button-container a:hover,
+        .dropdown-container a:hover {
+            background-color: #00ced1;
+        }
+
         .dropdown-container {
             position: relative;
             display: inline-block;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -18,16 +74,22 @@
             z-index: 1;
             border-radius: 5px;
             overflow: hidden;
+            top: 100%; /* Position dropdown below the button */
+            left: 0;
+            margin-top: 5px; /* Add space between button and dropdown */
         }
+
         .dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
+
         .dropdown-content a:hover {
             background-color: #ddd;
         }
+
         .dropdown-container:hover .dropdown-content {
             display: block;
         }
@@ -52,8 +114,9 @@
             <a href="/templates/contact_form.html">Contact</a>
             <a href="/templates/why_this_website.html">Why this website?</a>
             <a href="https://github.com/brizuelayeah" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/oscar-brizuela/" target="_blank">LinkedIn</a>
             <div class="dropdown-container">
-                <a href="javascript:void(0);">My CV</a>
+                <a>My CV</a>
                 <div class="dropdown-content">
                     <a href="project_types/university_projects/projects_documents/CV_Oscar_january_2025_ENG_nf.pdf" target="_blank">View CV</a>
                     <a href="project_types/university_projects/projects_documents/CV_Oscar_january_2025_ENG_nf.pdf" download>Download CV</a>

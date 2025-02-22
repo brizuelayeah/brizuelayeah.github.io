@@ -196,11 +196,6 @@ footer {
     display: block;
 }
 
-.subject-toggle {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
-}
 
 .subject-toggle,
 .projects-toggle {
@@ -208,7 +203,7 @@ footer {
     color: blue;
     text-decoration: underline;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 4px 10px;
     border: 2px solid #40e0d0;
     border-radius: 5px;
     background-color: #f0f8ff;
@@ -220,6 +215,10 @@ footer {
     background-color: #e0f7fa;
     border-color: #00ced1;
     opacity: 0.8;
+}
+
+.study-program ul li {
+    margin-bottom: 5px; /* Add space between list items */
 }
 
 .year-1 {
@@ -258,6 +257,39 @@ footer {
 .subject-dropdown.active,
 .projects-list.active {
     display: block;
+}
+
+.year-1-heading {
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.year-2-heading {
+    color: white;
+    background-color: #4c70af;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.year-3-heading {
+    color: white;
+    background-color: #dfa72e;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.year-4-heading {
+    color: white;
+    background-color: #d76045;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 

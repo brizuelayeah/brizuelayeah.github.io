@@ -5,10 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#introduction {
+    text-align: left;
+}
+
+#introduction p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+#introduction ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#introduction ul li {
+    background-color: #f0f8ff;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#introduction ul li:hover {
+    background-color: #e0f7fa;
+    border-color: #00ced1;
+}
+
+#introduction ul li strong {
+    color: #4CAF50;
+}
+
+
+    </style>
 </head>
 <body>
     <header>
-        <h1>My Projects</h1>
+        <h1>Why did I create this website?</h1>
     </header>
     <main>
         <section id="introduction">
@@ -29,8 +96,8 @@
                         I was a bit lost. I hope this website can help others to see which specific projects I've been working on and what I've been learning.
                     </li>
                     <li>
-                        <strong>To have an excuse for building one more project.</strong> This website itself is another simple projects, which has been useful to me to learn
-                        a bit more about web development, and refresh those skills I've had "stucked" lately due to my specialization in AI.
+                        <strong>To have an excuse for building one more project.</strong> This website itself is another simple project. Since it has been developed from scratch, 
+                        it has been useful to me to learn a bit more about web development, and refresh those skills I've had "stucked" lately due to my specialization in AI.
                     </li>
                     <li>
                         <strong>To have my own website online!</strong>
@@ -41,7 +108,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 [Óscar Brizuela]. All rights reserved.</p>
+        <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
 </body>
 </html>
