@@ -7,6 +7,7 @@
     <title>University Projects</title>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
         <h1>University Projects</h1>
     </header>
@@ -1008,6 +1009,17 @@
     </footer>
 
     <script src="../../js/script.js"></script>
+    <script>
+        function changeLanguage(lang) {
+            // Implement language change logic here
+            console.log("Language selected: ", lang);
+        }
 
+        fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

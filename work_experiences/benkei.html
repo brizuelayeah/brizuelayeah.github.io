@@ -62,6 +62,7 @@
     </style>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
         <img src="../static/images/Benkei_logo.png" alt="Benkei Logo">
         <h1>Benkei: innovation & strategy consulting</h1>
@@ -111,5 +112,17 @@
     <footer>
         <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
+    <script>
+        function changeLanguage(lang) {
+            // Implement language change logic here
+            console.log("Language selected: ", lang);
+        }
+
+        fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

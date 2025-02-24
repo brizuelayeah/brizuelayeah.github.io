@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"
+    <link rel="stylesheet" href="../static/styles.css">
     <title>Contact Page</title>
 
         
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <div class="contact-form">
         <h2>Contact </h2>
         <form action="/send-email" method="POST">
@@ -28,4 +29,16 @@
         </form>
     </div>
 </body>
+<script>
+    function changeLanguage(lang) {
+        // Implement language change logic here
+        console.log("Language selected: ", lang);
+    }
+
+    fetch('../navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
 </html>

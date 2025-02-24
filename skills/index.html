@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
     <title>Coming Soon</title>
     <style>
         body {
@@ -34,9 +35,22 @@
     </style>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <div class="coming-soon-container">
         <h1>Coming Soon...</h1>
         <p>Stay tuned! Skills will be posted here.</p>
     </div>
 </body>
+<script>
+    function changeLanguage(lang) {
+        // Implement language change logic here
+        console.log("Language selected: ", lang);
+    }
+
+    fetch('../navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
 </html>

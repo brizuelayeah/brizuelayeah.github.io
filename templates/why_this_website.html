@@ -74,6 +74,7 @@ main {
     </style>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
         <h1>Why did I create this website?</h1>
     </header>
@@ -110,5 +111,17 @@ main {
     <footer>
         <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
+    <script>
+        function changeLanguage(lang) {
+            // Implement language change logic here
+            console.log("Language selected: ", lang);
+        }
+
+        fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

@@ -62,8 +62,9 @@
     </style>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
-        <img src="../static/images/Bitbrain_logo.jpg" alt="Bitbrain Logo">
+        <img src="../static/images/Bitbrain_logo.png" alt="Bitbrain Logo">
         <h1>Bitbrain: advanced neurotechnology</h1>
     </header>
     <main>
@@ -124,5 +125,17 @@
     <footer>
         <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
+    <script>
+        function changeLanguage(lang) {
+            // Implement language change logic here
+            console.log("Language selected: ", lang);
+        }
+
+        fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

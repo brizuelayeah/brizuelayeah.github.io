@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="../../static/styles.css">
     <title>
         Final Bachelor Thesis: Information decoding about elderly people cognitive
         state from EEG activity during sleep
@@ -36,11 +36,12 @@
             color: #555;
         }
         h1 {
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
             padding-bottom: 5px;
             display: inline-block;
             margin-bottom: 20px;
+            margin-top: 80px;
             text-align: center; /* Center the text within the heading */
             width: 100%; /* Ensure the heading takes the full width of its container */
         }
@@ -84,6 +85,7 @@
     </style>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
         <h1>Final Bachelor Thesis:
             <br>
@@ -145,5 +147,17 @@
     <footer>
         <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
+    <script>
+        function changeLanguage(lang) {
+            // Implement language change logic here
+            console.log("Language selected: ", lang);
+        }
+
+        fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

@@ -20,6 +20,15 @@
             color: #333;
         }
 
+        header {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        header img {
+            margin-top: 20px;
+        }
+
         main {
             flex: 1 0 auto;
             max-width: 800px;
@@ -35,12 +44,13 @@
             padding: 10px;
             flex-shrink: 0;
         }
+
         .button-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
-            align-items: center; /* Align items vertically */
+            align-items: center;
         }
 
         .button-container a,
@@ -53,7 +63,23 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
             display: flex;
-            align-items: center; /* Center text vertically */
+            align-items: center;
+        }
+
+        .button-container .contact-button {
+            background-color: #5aa8e4;
+        }
+
+        .button-container .contact-button:hover {
+            background-color: #0051ff;
+        }
+
+        .button-container .my-cv-button {
+            background-color: #5aa8e4;
+        }
+
+        .button-container .my-cv-button:hover {
+            background-color: #0051ff;
         }
 
         .button-container a:hover,
@@ -74,9 +100,9 @@
             z-index: 1;
             border-radius: 5px;
             overflow: hidden;
-            top: 100%; /* Position dropdown below the button */
+            top: 100%;
             left: 0;
-            margin-top: 5px; /* Add space between button and dropdown */
+            margin-top: 5px;
         }
 
         .dropdown-content a {
@@ -93,16 +119,53 @@
         .dropdown-container:hover .dropdown-content {
             display: block;
         }
+
+        .language-selector {
+            margin-left: auto;
+        }
+
+        .social-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-buttons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #4CAF50;
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .social-buttons a:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+        }
+
+        .social-buttons img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
-        <h1>Óscar Brizuela's Portfolio</h1>
-        <img src="images/CV_picture_no_bg.png" alt="Profile Picture" width="150" height="150">
+        <img src="static/images/CV_picture_no_bg.png" alt="Profile Picture" width="200" height="250" style="border-radius: 50% !important; border: 3px solid #4CAF50 !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;">
     </header>
     <main>
         <section id="introduction">
-            <h2>About Me</h2>
+            <h2>Óscar Brizuela's Portfolio</h2>
             <p>Hi! I'm Óscar Brizuela, a just graduated Computer Engineer with a passion about Artificial Intelligence and the world of data. I want this page to be a sort
                 of repository of my projects, both personal ones and those interesting from my degree. Know more about me taking a look at them!
             </p>
@@ -111,12 +174,9 @@
             <a href="/project_types/projects.html">Projects</a>
             <a href="/work_experiences/work_experience.html">Work Experience</a>
             <a href="/skills">Skills</a>
-            <a href="/templates/contact_form.html">Contact</a>
-            <a href="/templates/why_this_website.html">Why this website?</a>
-            <a href="https://github.com/brizuelayeah" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/oscar-brizuela/" target="_blank">LinkedIn</a>
+            <a href="/templates/contact_form.html" class="contact-button">Contact</a>
             <div class="dropdown-container">
-                <a>My CV</a>
+                <a class="my-cv-button">My CV</a>
                 <div class="dropdown-content">
                     <a href="project_types/university_projects/projects_documents/CV_Oscar_january_2025_ENG_nf.pdf" target="_blank">View CV</a>
                     <a href="project_types/university_projects/projects_documents/CV_Oscar_january_2025_ENG_nf.pdf" download>Download CV</a>
@@ -127,5 +187,27 @@
     <footer>
         <p>&copy; 2025 Óscar Brizuela. All rights reserved.</p>
     </footer>
+    <script>
+        function changeLanguage(lang) {
+            // Implement language change logic here
+            console.log("Language selected: ", lang);
+        }
+
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+    <div class="social-buttons">
+        <a href="https://github.com/brizuelayeah" target="_blank">
+            <img src="static/images/Github_logo.png" alt="GitHub Logo">
+            GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/oscar-brizuela/" target="_blank">
+            <img src="static/images/Linkedin_logo.png" alt="LinkedIn Logo">
+            LinkedIn
+        </a>
+    </div>
 </body>
 </html>

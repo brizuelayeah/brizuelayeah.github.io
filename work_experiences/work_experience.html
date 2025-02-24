@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
+    <div id="nav-placeholder"></div>
     <header>
         <h1>My working experience</h1>
     </header>
@@ -26,4 +27,16 @@
         <p>&copy; 2025 [Óscar Brizuela]. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    function changeLanguage(lang) {
+        // Implement language change logic here
+        console.log("Language selected: ", lang);
+    }
+
+    fetch('../navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+    });
+</script>
 </html>
